@@ -1,76 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Flipbook Viewer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      background: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <title>Flipbook Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            background: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-    #flipbook {
-      width: 800px;
-      height: 600px;
-    }
+        #flipbook {
+            width: 800px;
+            height: 600px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+        }
 
-    #flipbook .page {
-      width: 400px;
-      height: 600px;
-    }
+        #flipbook .page {
+            width: 400px;
+            height: 600px;
+        }
 
-    #flipbook .page img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-  </style>
-  <!-- Required JS -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/blasten/turn.js/turn.min.js"></script>
+        #flipbook .page img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
 
-  <div id="flipbook">
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362599/1_z57tud.jpg" alt="Page 1"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362596/2_vjp7jv.jpg" alt="Page 2"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362597/3_g8hgn2.jpg" alt="Page 3"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362599/4_tpn412.jpg" alt="Page 4"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362596/5_bsgb1p.jpg" alt="Page 5"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362599/6_hrcfjm.jpg" alt="Page 6"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362597/7_ap40ya.jpg" alt="Page 7"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362597/8_rz9bj9.jpg" alt="Page 8"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362600/9_fugotk.jpg" alt="Page 9"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362598/10_hl4fkh.jpg" alt="Page 10"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362598/11_mane9n.jpg" alt="Page 11"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362600/12_o584ox.jpg" alt="Page 12"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362600/13_cuswnk.jpg" alt="Page 13"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362602/14_pwyf1v.jpg" alt="Page 14"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362602/15_gjxqnl.jpg" alt="Page 15"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362602/16_just0g.jpg" alt="Page 16"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362601/17_i8ats3.jpg" alt="Page 17"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362602/18_grx7d4.jpg" alt="Page 18"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362602/19_ydxfk1.jpg" alt="Page 19"></div>
-    <div class="page"><img src="https://res.cloudinary.com/da0bnopjg/image/upload/v1753362602/20_h8ypd1.jpg" alt="Page 20"></div>
-  </div>
+    <div id="flipbook">
+        <div class="page"><img src="https://placehold.co/400x600/ff7/fff?text=1"></div>
+        <div class="page"><img src="https://placehold.co/400x600/7af/fff?text=2"></div>
+        <div class="page"><img src="https://placehold.co/400x600/f7a/fff?text=3"></div>
+        <div class="page"><img src="https://placehold.co/400x600/7fa/fff?text=4"></div>
+    </div>
 
-  <script>
-    $(document).ready(function () {
-      $('#flipbook').turn({
-        width: 800,
-        height: 600,
-        autoCenter: true
-      });
-    });
-  </script>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/blasten/turn.js/turn.min.js"></script>
+    <script>
+        $(function () {
+            $('#flipbook').turn({
+                width: 800,
+                height: 600,
+                display: 'double',
+                autoCenter: true
+            });
+        });
+    </script>
 </body>
+
 </html>
-
-
